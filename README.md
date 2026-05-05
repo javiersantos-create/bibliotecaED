@@ -2,3 +2,4 @@
 
 ## Autors:
 * Lluís
+* Javier
