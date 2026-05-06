@@ -33,16 +33,32 @@ public class Llibre{
         public boolean getPrestat(){
             return prestat;
         }
-
-        
-    
+       
     // procediments perquè no retorna res. 
         
         public void prestar(){
             prestat = true;
         }
 
-        public void retornar(){
+        // setters per modificar
+        
+        public void setTitol(String titol) {
+			this.titol = titol;
+		}
+
+		public void setCategoria(String categoria) {
+			this.categoria = categoria;
+		}
+
+		public void setAutor(String autor) {
+			this.autor = autor;
+		}
+
+		public void setPrestat(boolean prestat) {
+			this.prestat = prestat;
+		}
+
+		public void retornar(){
             prestat = false;
         }
     

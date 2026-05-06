@@ -18,9 +18,9 @@ public class Biblioteca {
     }
 
     // Funció per eliminar el llibre pel títol
-    public String eliminarLlibre(String titol) {
+    public String eliminarLlibre(String titol,String autor) {
         // Busquem si el llibre existeix abans d'intentar esborrar
-        Llibre llibreATreure = buscarLlibre(titol);
+        Llibre llibreATreure = buscarLlibre(titol,autor);
         
         if (llibreATreure != null) {
             llibres.remove(llibreATreure); // Aquí és on s'esborra l'objecte concret
@@ -31,7 +31,7 @@ public class Biblioteca {
     }
 
     // funcio perquè si retorna
-    public Llibre buscarLlibre(String titol){
+    public Llibre buscarLlibre(String titol,String autor){
 
         for(Llibre llibre : llibres){
             if(llibre.getTitol().equalsIgnoreCase(titol)){
