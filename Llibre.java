@@ -27,6 +27,8 @@ public class LLibre{
         public boolean getPrestat(){
             return prestat;
         }
+
+        
     
     // procediments perquè no retorna res. 
         
