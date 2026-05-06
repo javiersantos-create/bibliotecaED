@@ -4,23 +4,23 @@ import java.text.Normalizer;
 
 public class Biblioteca {
     // arraylist
-    private List<Llibre> llibres;
+    private List <Llibre> llibres;
 
     // constructor 
-    public Bilbioteca(){
-        this.biblioteca = new ArrayList();
+    public Biblioteca(){
+        this.llibres = new ArrayList<>();
     }
 
     // procediment afegir llibre, ja que no retorna res
     public void afegirLlibre(Llibre llibre){
 
-        llibres.add(Llibre);
+        llibres.add(llibre);
     }
 
     // Funció per eliminar el llibre pel títol
-    public String eliminarLlibre(String titol) {
+    public String eliminarLlibre(String titol,String autor) {
         // Busquem si el llibre existeix abans d'intentar esborrar
-        Llibre llibreATreure = buscarLlibre(titol);
+        Llibre llibreATreure = buscarLlibre(titol,autor);
         
         if (llibreATreure != null) {
             llibres.remove(llibreATreure); // Aquí és on s'esborra l'objecte concret
@@ -31,7 +31,7 @@ public class Biblioteca {
     }
 
     // funcio perquè si retorna
-    public Llibre buscarLlibre(String titol){
+    public Llibre buscarLlibre(String titol,String autor){
 
         for(Llibre llibre : llibres){
             if(llibre.getTitol().equalsIgnoreCase(titol)){
@@ -43,17 +43,22 @@ public class Biblioteca {
 
     }
 
-    // aqui busquem un llibre ignorant els accents.
-    public Llibre buscarLlibreSenseAccents(String titol) {
-        String titolNormalitzat = normalitzarText(titol);
-        for (Llibre l : llibres) {
-            if (normalitzarText(l.getTitol()).equals(titolNormalitzat)) {
-                return l;
-            }
-        }
-        return null;
-    }
+    public String normalitzarText(String text) {
+        if (text == null) return "";
 
+        String resultat = text.toLowerCase();
+        
+        // Sustituimos las vocales con acentos por vocales normales
+        resultat = resultat.replace('á', 'a').replace('à', 'a');
+        resultat = resultat.replace('é', 'e').replace('è', 'e');
+        resultat = resultat.replace('í', 'i').replace('ï', 'i');
+        resultat = resultat.replace('ó', 'o').replace('ò', 'o');
+        resultat = resultat.replace('ú', 'u').replace('ü', 'u');
+        resultat = resultat.replace('ç', 'c'); // ¡No nos olvidemos de la ce trencada!
+
+        return resultat.trim(); // .trim() quita espacios vacíos al final
+    }
+    
     public void llistarLlibres() {
 
         System.out.println("--- Inventari de la Biblioteca ---");
@@ -65,7 +70,7 @@ public class Biblioteca {
         }
     }
 
-    pulbic List<Llibre> getLlibres(){
+    public List<Llibre> getLlibres(){
         return llibres;
     }
 

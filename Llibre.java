@@ -1,4 +1,4 @@
-public class LLibre{
+public class Llibre{
 
     // atributs encapsulats
         private String titol;
@@ -7,7 +7,7 @@ public class LLibre{
         private boolean prestat;
 
     // constructor
-        public LLibre(String titol,String categoria, String autor, boolean prestat){
+        public Llibre(String titol,String categoria, String autor, boolean prestat){
 
             this.titol = titol;
             this.categoria = categoria;
@@ -33,16 +33,32 @@ public class LLibre{
         public boolean getPrestat(){
             return prestat;
         }
-
-        
-    
+       
     // procediments perquè no retorna res. 
         
         public void prestar(){
             prestat = true;
         }
 
-        public void retornar(){
+        // setters per modificar
+        
+        public void setTitol(String titol) {
+			this.titol = titol;
+		}
+
+		public void setCategoria(String categoria) {
+			this.categoria = categoria;
+		}
+
+		public void setAutor(String autor) {
+			this.autor = autor;
+		}
+
+		public void setPrestat(boolean prestat) {
+			this.prestat = prestat;
+		}
+
+		public void retornar(){
             prestat = false;
         }
     
