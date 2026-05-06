@@ -1,4 +1,4 @@
-public class LLibre{
+public class Llibre{
 
     // atributs encapsulats
         private String titol;
@@ -7,7 +7,7 @@ public class LLibre{
         private boolean prestat;
 
     // constructor
-        public LLibre(String titol,String categoria, String autor, boolean prestat){
+        public Llibre(String titol,String categoria, String autor, boolean prestat){
 
             this.titol = titol;
             this.categoria = categoria;

@@ -2,8 +2,8 @@ public class Main {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
 
-        Llibre llibre1 = new Llibre("1984","Novel·la", "George Orwell");
-        Llibre llibre2 = new Llibre("El petit príncep","Històrica", "Antoine de Saint-Exupéry");
+        Llibre llibre1 = new Llibre("1984","Novel·la", "George Orwell",false);
+        Llibre llibre2 = new Llibre("El petit príncep","Històrica", "Antoine de Saint-Exupéry",false);
 
         biblioteca.afegirLlibre(llibre1);
         biblioteca.afegirLlibre(llibre2);

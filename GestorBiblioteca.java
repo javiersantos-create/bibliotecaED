@@ -20,7 +20,7 @@ public class GestorBiblioteca {
 			return false;
 		}
 
-		if (llibre.esPrestat()) {
+		if (llibre.getPrestat()) {
 			System.out.println("Aquest llibre ja està prestat.");
 			return false;
 		}
