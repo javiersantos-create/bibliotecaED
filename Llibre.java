@@ -2,15 +2,17 @@ public class LLibre{
 
     // atributs encapsulats
         private String titol;
+        private String categoria;
         private String autor;
         private boolean prestat;
 
     // constructor
-        public LLibre(String titol, String autor, boolean prestat){
+        public LLibre(String titol,String categoria, String autor, boolean prestat){
 
             this.titol = titol;
+            this.categoria = categoria;
             this.autor = autor;
-            this.prestat = false; // sempre serà false.
+            this.prestat = false; // per defecte sempre estarà disponible
             
         }
 
@@ -18,6 +20,10 @@ public class LLibre{
 
         public String getTitol(){
             return titol;
+        }
+
+        public String getCategoria(){
+            return categoria;
         }
 
         public String getAutor(){
@@ -45,7 +51,7 @@ public class LLibre{
         @Override
         public String toString(){
             // retorna el titol del llibre + l'autor i si el llibre esta prestat sortira En préstec i si no esta prestat sortira disponible
-            return titol + " de " + autor + (prestat ? "(En préstec) " : "(Disponible)");
+            return "Titol: " + titol + " categoria: "+ categoria + " de " + autor + (prestat ? "(En préstec) " : "(Disponible)");
         }
 
 
