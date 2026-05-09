@@ -2,13 +2,25 @@ import java.time.LocalDate;
 
 public class Prestec {
 	
+<<<<<<< HEAD
 	// ATRIBUTS
+=======
+	/**
+     * Atributs per crear el prestec d'un llibre
+     */
+>>>>>>> lluis
     private Usuari usuari;
     private Llibre llibre;
     private LocalDate dataPrestec;
     private LocalDate dataRetorn;
     
+<<<<<<< HEAD
     // CONSTRUCTOR
+=======
+    /**
+     * Constructor per prestar un llibre
+     */
+>>>>>>> lluis
     public Prestec(Usuari usuari, Llibre llibre, LocalDate dataPrestec) {
         this.usuari = usuari;
         this.llibre = llibre;
@@ -17,7 +29,13 @@ public class Prestec {
     }
     
     // MÈTODES
+<<<<<<< HEAD
     // Aquest mètode és per a saber si, comparant la data actual i la dataRetorn, està fora de termini o no
+=======
+    /** 
+     * Aquest mètode és per a saber si, comparant la data actual i la dataRetorn, està fora de termini o no
+    */ 
+>>>>>>> lluis
     public boolean estaForaDeTermini() {
         return LocalDate.now().isAfter(dataRetorn);
     }

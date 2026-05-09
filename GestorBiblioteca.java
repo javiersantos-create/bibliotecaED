@@ -5,15 +5,36 @@ import java.util.List;
 public class GestorBiblioteca {
 
 	// ATRIBUTS
+<<<<<<< HEAD
 	private static final int MAX_LLIBRES_PRESTATS = 3;
 	private List<Prestec> prestecs;
 
 	// CONSTRUCTOR
+=======
+	/**
+	 * Int per desar el maxim de llibres que es poden prestar
+	 */
+	private static final int MAX_LLIBRES_PRESTATS = 3;
+	/**
+	 * Llista de prestecs
+	 */
+	private List<Prestec> prestecs;
+
+	/**
+	 * Constructor per crear el gestor de la biblioteca
+	 */
+>>>>>>> lluis
 	public GestorBiblioteca() {
 		this.prestecs = new ArrayList<>();
 	}
 
 	// MÈTODES
+<<<<<<< HEAD
+=======
+	/**
+	 * Funcio per prestar llibres
+	 */
+>>>>>>> lluis
 	public boolean prestarLlibre(Usuari usuari, Llibre llibre) {
 		if (usuari == null || llibre == null) {
 			System.out.println("Usuari o llibre no vàlid.");
@@ -41,6 +62,12 @@ public class GestorBiblioteca {
 		return true;
 	}
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Funcio per retornar llibres
+	 */
+>>>>>>> lluis
 	public boolean retornarLlibre(Usuari usuari, Llibre llibre) {
 		if (usuari == null || llibre == null) {
 			System.out.println("Usuari o llibre no vàlid.");
@@ -69,6 +96,12 @@ public class GestorBiblioteca {
 		return true;
 	}
 
+<<<<<<< HEAD
+=======
+	/**
+	 * metode per llistar els prestecs
+	 */
+>>>>>>> lluis
 	public void llistarPrestecs() {
 	    if (prestecs.isEmpty()) {
 	        System.out.println("No hi ha préstecs actius.");
@@ -80,7 +113,13 @@ public class GestorBiblioteca {
 	    }
 	}
 
+<<<<<<< HEAD
 	// GETTERS
+=======
+	/**
+	 * Getter de llista de prestecs
+	 */
+>>>>>>> lluis
 	public List<Prestec> getPrestecs() {
 		return prestecs;
 	}
